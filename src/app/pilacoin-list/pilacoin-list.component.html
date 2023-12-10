@@ -1,0 +1,16 @@
+<!-- src/app/meu-componente/meu-componente.component.html -->
+<h2>Pilas minerados</h2>
+<div *ngIf="minerados">
+    <h2>Minerados</h2>
+    <ul>
+      <li *ngFor="let pila of minerados">{{ pila | json }}</li>
+    </ul>
+</div>
+  
+<div *ngIf="validadosOutros">
+    <h2>Validados (Outros)</h2>
+    <ul>
+      <li *ngFor="let pila of validadosOutros">{{ pila | json }}</li>
+    </ul>
+</div>
+  
