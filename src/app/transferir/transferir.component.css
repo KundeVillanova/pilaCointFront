@@ -1,0 +1,6 @@
+/* Adicione isso ao seu arquivo de estilo */
+.user-list {
+    max-height: 350px; /* Ajuste conforme necessário */
+    overflow-y: auto;
+}
+  

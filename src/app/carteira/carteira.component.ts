@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PilaCoinDTO } from '../dto/PilaCoinDTO';
-import { PilaValidadoDto } from '../dto/PilaValidadoDto';
+import { PilaCoinJson } from '../models/PilaCoinJson';
+import { PilaValidadoDto } from '../models/PilaValidadoDto';
 import { PilaCoinService } from '../pila-coin.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { PilaCoinService } from '../pila-coin.service';
 })
 export class CarteiraComponent implements OnInit {
 
-  pilasMinerados: PilaCoinDTO[] = [];
+  pilasMinerados: PilaCoinJson[] = [];
   pilasValidados: PilaValidadoDto[] = [];
   saldo: number = 0;
 

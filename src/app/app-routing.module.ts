@@ -5,12 +5,14 @@ import { WalletHomeComponent } from './wallet-home/wallet-home.component';
 import { PilacoinListComponent } from './pilacoin-list/pilacoin-list.component';
 import { MineracaoComponent } from './mineracao/mineracao.component';
 import { CarteiraComponent } from './carteira/carteira.component';
+import { TransferirComponent } from './transferir/transferir.component';
 
 const routes: Routes = [
   { path: '', component: WalletHomeComponent },
   { path: 'pilacoin-list', component: PilacoinListComponent },
   { path: 'mineracao', component: MineracaoComponent },
-  { path: 'carteira', component: CarteiraComponent } // Adiciona esta linha
+  { path: 'carteira', component: CarteiraComponent },
+  { path: 'transferir', component: TransferirComponent },
   // Adicione outras rotas conforme necessário
 ];
 

@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WalletHomeComponent } from './wallet-home/wallet-home.component';
 import { MineracaoComponent } from './mineracao/mineracao.component';
 import { CarteiraComponent } from './carteira/carteira.component';
+import { TransferirComponent } from './transferir/transferir.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CarteiraComponent } from './carteira/carteira.component';
     PilacoinListComponent,
     WalletHomeComponent,
     MineracaoComponent,
-    CarteiraComponent
+    CarteiraComponent,
+    TransferirComponent
   ],
   imports: [
     BrowserModule,
