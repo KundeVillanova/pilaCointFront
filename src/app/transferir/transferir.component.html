@@ -1,33 +1,39 @@
 <!-- transferir.component.html -->
 <div class="">
-    <h3>Transferir PilaCoins</h3>
-      <div class="user-list">
-        <table class="table">
+  <h3>Transferir PilaCoins</h3>
+  <div class="user-list">
+      <table class="table">
           <thead>
-            <tr>
-              <th>ID</th>
-              <th>Nome</th>
-              <!-- <th>Chave Pública</th> -->
-              <th>Ação</th>
-            </tr>
+              <tr>
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th>Ação</th>
+              </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let usuario of usuarios" [class.active]="usuario.id === selectedUserId">
-              <td>{{ usuario.id }}</td>
-              <td>{{ usuario.nome }}</td>
-              <!-- <td>{{ usuario.chavePublica }}</td> -->
-              <td>
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  (click)="onUsuarioSelect(usuario.id)"
-                >
-                  Transferir PilaCoin
-                </button>
-              </td>
-            </tr>
+              <tr *ngFor="let usuario of usuarios" [class.active]="usuario.id === selectedUserId">
+                  <td>{{ usuario.id }}</td>
+                  <td>{{ usuario.nome }}</td>
+                  <td>
+                      <button
+                          type="button"
+                          class="btn btn-primary"
+                          (click)="onUsuarioSelect(usuario.id)"
+                      >
+                          Transferir PilaCoin
+                      </button>
+                  </td>
+              </tr>
           </tbody>
-        </table>
-      </div>   
+      </table>
+  </div>
+  <div *ngIf="selectedUserId !== null">
+      <button
+          type="button"
+          class="btn btn-success"
+          (click)="transferirPila()"
+      >
+          Confirmar Transferência
+      </button>
+  </div>
 </div>
-  

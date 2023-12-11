@@ -1,39 +1,34 @@
-<!-- wallet-home.component.html -->
-
-<!-- wallet-home.component.html -->
-
 <div class="wallet-home-container">
-    <div class="card text-center wallet-home-card">
-      <div class="row">
-        <!-- Barra lateral com botões -->
-        <div class="col-md-2">
-          <div class="card">
-            <div class="card-header">
-              <h2>Opções</h2>
-            </div>
-            <div class="card-body">
-              <div class="btn-group-vertical" role="group">
-                <button type="button" class="btn btn-primary mb-2" (click)="navigateTo('mineracao')">Mineração</button>
-                <button type="button" class="btn btn-primary mb-2" (click)="navigateTo('transferir')">Usuarios</button>
-                <button type="button" class="btn btn-primary mb-2" (click)="navigateTo('carteira')">Saldo</button>
-                <!-- <button type="button" class="btn btn-primary mb-2" (click)="navigateTo('pilacoin-list')">Transferir</button> -->
-              </div>
-            </div>
+  <div class="card text-center wallet-home-card m-0">
+    <div class="row">
+      <!-- Barra lateral com botões -->
+      <div class="col-md-2">
+        <div class="card options-card m-0">
+          <div class="card-header">
+            <h2>Opções</h2>
           </div>
-        </div>
-        <!-- Renderização das opções escolhidas -->
-        <div class="col-md-10">
-          <div class="card">
-            <div class="card-header">
-              <h2>Minha Carteira Digital</h2>
-            </div>
-            <div class="card-body">
-              <router-outlet></router-outlet>
-              <!-- Aqui você pode adicionar o conteúdo dinâmico conforme necessário -->
+          <div class="card-body h-100">
+            <div class="btn-group-vertical" role="group" id="options-menu">
+              <button type="button" class="btn btn-primary mb-2" (click)="navigateTo('mineracao')">Mineração</button>
+              <button type="button" class="btn btn-primary mb-2" (click)="navigateTo('transferir')">Usuarios</button>
+              <button type="button" class="btn btn-primary mb-2" (click)="navigateTo('carteira')">Saldo</button>
+              <!-- <button type="button" class="btn btn-primary mb-2" (click)="navigateTo('pilacoin-list')">Transferir</button> -->
             </div>
           </div>
         </div>
       </div>
+      <!-- Renderização das opções escolhidas -->
+      <div class="col-md-10">
+        <div class="card m-0">
+          <div class="card-header">
+            <h2>Minha Carteira Digital</h2>
+          </div>
+          <div class="card-body">
+            <router-outlet></router-outlet>
+            <!-- Aqui você pode adicionar o conteúdo dinâmico conforme necessário -->
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
-  
